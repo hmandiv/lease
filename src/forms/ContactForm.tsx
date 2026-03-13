@@ -1,3 +1,5 @@
+import { Text } from "@mantine/core";
+
 export default function ContactForm() {
-  return <div>Contact form goes here</div>;
+  return <Text>Contact form will go here.</Text>;
 }
