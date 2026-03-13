@@ -19,7 +19,7 @@ export default function ContactPage() {
 
           <Text c="dimmed">
             Have questions about our leasing opportunities? Fill out the form
-            below and we will get back to you as soon as possible.
+            and we will get back to you as soon as possible.
           </Text>
 
           <ContactForm />
