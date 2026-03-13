@@ -12,3 +12,7 @@ body {
 .mantine-Card-root:hover {
     transform: translateY(-4px);
 }
+
+footer a:hover {
+    text-decoration: underline;
+}
