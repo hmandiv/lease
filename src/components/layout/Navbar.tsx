@@ -1,24 +1,51 @@
-import { Container, Group, Button, Text } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Container, Group, Button, Text, Box } from "@mantine/core";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const isHome = location.pathname === "/";
+  const isContact = location.pathname === "/contact";
+
   return (
-    <Container size="lg" py="md">
-      <Group justify="space-between">
-        <Text fw={700} size="lg">
-          Brand Name
-        </Text>
+    <Box
+      component="header"
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        background: "rgba(248, 249, 250, 0.92)",
+        backdropFilter: "blur(10px)",
+        borderBottom: "1px solid #e9ecef",
+      }}
+    >
+      <Container size="lg" py="md">
+        <Group justify="space-between">
+          <Text component={Link} to="/" fw={800} size="lg" td="none" c="dark">
+            Brand Name
+          </Text>
 
-        <Group gap="sm">
-          <Button component={Link} to="/" variant="subtle">
-            Home
-          </Button>
+          <Group gap="xs">
+            <Button
+              component={Link}
+              to="/"
+              variant={isHome ? "filled" : "subtle"}
+              radius="md"
+            >
+              Home
+            </Button>
 
-          <Button component={Link} to="/contact" variant="subtle">
-            Contact
-          </Button>
+            <Button
+              component={Link}
+              to="/contact"
+              variant={isContact ? "filled" : "subtle"}
+              radius="md"
+            >
+              Contact
+            </Button>
+          </Group>
         </Group>
-      </Group>
-    </Container>
+      </Container>
+    </Box>
   );
 }
