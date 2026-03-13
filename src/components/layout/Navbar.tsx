@@ -21,7 +21,7 @@ export default function Navbar() {
     >
       <Container size="lg" py="md">
         <Group justify="space-between">
-          <Text component={Link} to="/" fw={800} size="lg" td="none" c="dark">
+          <Text component={Link} to="/" fw={900} size="xl" td="none" c="dark">
             Brand Name
           </Text>
 

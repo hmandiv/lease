@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <Container size="lg" py={120}>
+    <Container size="lg" py={160}>
       <Stack align="center" gap="lg">
         <Title
           order={1}
