@@ -1,4 +1,5 @@
 import { Container, Title, Text, Button, Stack } from "@mantine/core";
+import { Link } from "react-router-dom";
 
 export default function CTASection() {
   return (
@@ -9,11 +10,11 @@ export default function CTASection() {
         </Title>
 
         <Text ta="center" c="dimmed" maw={600}>
-          Contact us today to learn more about available locations, lease
-          terms, and pricing options.
+          Contact us today to learn more about available locations, lease terms,
+          and pricing options.
         </Text>
 
-        <Button size="md">
+        <Button component={Link} to="/contact" size="md">
           Contact Us
         </Button>
       </Stack>
