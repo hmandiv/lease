@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 
+import { BrowserRouter } from "react-router-dom";
+
 import App from "./App.tsx";
 import "./styles/globals.css";
 
@@ -13,7 +15,9 @@ createRoot(document.getElementById("root")!).render(
         primaryColor: "blue",
       }}
     >
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </MantineProvider>
   </StrictMode>,
 );

@@ -1,4 +1,5 @@
 import { Container, Title, Text, Button, Stack } from "@mantine/core";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -13,7 +14,9 @@ export default function HeroSection() {
           availability, pricing, and location details.
         </Text>
 
-        <Button size="md">Contact Us</Button>
+        <Button component={Link} to="/contact" size="md">
+          Contact Us
+        </Button>
       </Stack>
     </Container>
   );

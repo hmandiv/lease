@@ -1,4 +1,5 @@
 import { Container, Group, Button, Text } from "@mantine/core";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -9,8 +10,13 @@ export default function Navbar() {
         </Text>
 
         <Group gap="sm">
-          <Button variant="subtle">Home</Button>
-          <Button variant="subtle">Contact</Button>
+          <Button component={Link} to="/" variant="subtle">
+            Home
+          </Button>
+
+          <Button component={Link} to="/contact" variant="subtle">
+            Contact
+          </Button>
         </Group>
       </Group>
     </Container>
