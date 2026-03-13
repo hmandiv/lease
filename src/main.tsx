@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <MantineProvider
       theme={{
-        primaryColor: "blue",
+        primaryColor: "indigo",
       }}
     >
       <BrowserRouter>
