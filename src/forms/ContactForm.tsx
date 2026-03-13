@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextInput, Textarea, Button, Stack, Alert, Text } from "@mantine/core";
+import { TextInput, Textarea, Button, Stack, Alert } from "@mantine/core";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -98,11 +98,6 @@ export default function ContactForm() {
             {resultMessage}
           </Alert>
         )}
-
-        <Text c="dimmed">
-          Have questions about our lease opportunities? Fill out the form below
-          and we will get back to you as soon as possible.
-        </Text>
       </Stack>
     </form>
   );
