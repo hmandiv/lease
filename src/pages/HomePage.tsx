@@ -1,3 +1,4 @@
+import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
 import CTASection from "../sections/CTASection";
 import FeatureSection from "../sections/FeatureSection";
@@ -10,6 +11,7 @@ export default function HomePage() {
       <HeroSection />
       <FeatureSection />
       <CTASection />
+      <Footer />
     </>
   );
 }
