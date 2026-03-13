@@ -1,56 +1,78 @@
-import { Container, Title, Text, Grid, Card, Stack } from "@mantine/core";
+import { Container, Title, Text, Grid, Card, Stack, ThemeIcon } from "@mantine/core";
+import { MapPin, Handshake, Building2, BadgeDollarSign } from "lucide-react";
+
+const features = [
+  {
+    title: "Prime Locations",
+    description:
+      "Our leasing opportunities are located in high-traffic areas with excellent accessibility and visibility.",
+    icon: MapPin,
+  },
+  {
+    title: "Flexible Lease Terms",
+    description:
+      "We provide adaptable lease agreements to accommodate a variety of business needs.",
+    icon: Handshake,
+  },
+  {
+    title: "Available Units",
+    description:
+      "Multiple leasing options are available depending on space requirements and location preferences.",
+    icon: Building2,
+  },
+  {
+    title: "Competitive Pricing",
+    description:
+      "Our leasing opportunities are competitively priced to provide value while supporting business growth.",
+    icon: BadgeDollarSign,
+  },
+];
 
 export default function FeatureSection() {
   return (
-    <Container size="lg" py={80}>
-      <Stack align="center" mb={50}>
-        <Title order={2}>Why Lease With Us</Title>
-        <Text c="dimmed" ta="center" maw={600}>
+    <Container size="lg" py={90}>
+      <Stack align="center" gap="sm" mb={50}>
+        <Title order={2} ta="center">
+          Why Lease With Us
+        </Title>
+
+        <Text c="dimmed" ta="center" maw={640}>
           We offer flexible leasing opportunities designed to support businesses
           looking for prime locations and competitive terms.
         </Text>
       </Stack>
 
       <Grid>
-        <Grid.Col span={{ base: 12, md: 6 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4}>Prime Locations</Title>
-            <Text mt="sm" c="dimmed">
-              Our leasing opportunities are located in high-traffic areas with
-              excellent accessibility and visibility.
-            </Text>
-          </Card>
-        </Grid.Col>
+        {features.map((feature) => {
+          const Icon = feature.icon;
 
-        <Grid.Col span={{ base: 12, md: 6 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4}>Flexible Lease Terms</Title>
-            <Text mt="sm" c="dimmed">
-              We provide adaptable lease agreements to accommodate a variety of
-              business needs.
-            </Text>
-          </Card>
-        </Grid.Col>
+          return (
+            <Grid.Col key={feature.title} span={{ base: 12, sm: 6 }}>
+              <Card
+                shadow="sm"
+                padding="xl"
+                radius="lg"
+                withBorder
+                style={{
+                  height: "100%",
+                  transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                }}
+              >
+                <Stack gap="md">
+                  <ThemeIcon size={52} radius="md" variant="light">
+                    <Icon size={24} />
+                  </ThemeIcon>
 
-        <Grid.Col span={{ base: 12, md: 6 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4}>Available Units</Title>
-            <Text mt="sm" c="dimmed">
-              Multiple leasing options are available depending on space
-              requirements and location preferences.
-            </Text>
-          </Card>
-        </Grid.Col>
+                  <Title order={4}>{feature.title}</Title>
 
-        <Grid.Col span={{ base: 12, md: 6 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4}>Competitive Pricing</Title>
-            <Text mt="sm" c="dimmed">
-              Our leasing opportunities are competitively priced to provide
-              value while supporting business growth.
-            </Text>
-          </Card>
-        </Grid.Col>
+                  <Text c="dimmed" lh={1.7}>
+                    {feature.description}
+                  </Text>
+                </Stack>
+              </Card>
+            </Grid.Col>
+          );
+        })}
       </Grid>
     </Container>
   );

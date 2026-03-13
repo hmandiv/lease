@@ -8,3 +8,7 @@ body {
 * {
     box-sizing: border-box;
 }
+
+.mantine-Card-root:hover {
+    transform: translateY(-4px);
+}
