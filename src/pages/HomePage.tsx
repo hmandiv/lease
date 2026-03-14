@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Seo
-        title="Lease Opportunities | Brand Name"
+        title="Lease Opportunities | Direct Rent"
         description="Explore current lease opportunities, flexible terms, and available units. Contact us for pricing, availability, and next steps."
       />
       <Navbar />

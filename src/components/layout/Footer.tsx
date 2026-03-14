@@ -7,7 +7,7 @@ export default function Footer() {
       <Container size="lg" py="xl">
         <Group justify="space-between" wrap="wrap">
           <Text size="sm">
-            © {new Date().getFullYear()} Brand Name. All rights reserved.
+            © {new Date().getFullYear()} Direct Rent. All rights reserved.
           </Text>
 
           <Group gap="md">

@@ -22,7 +22,7 @@ export default function Navbar() {
       <Container size="lg" py="md">
         <Group justify="space-between">
           <Text component={Link} to="/" fw={900} size="xl" td="none" c="dark">
-            Brand Name
+            Direct Rent
           </Text>
 
           <Group gap="xs">

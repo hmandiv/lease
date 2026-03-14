@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <Seo
-        title="Contact Us | Brand Name"
+        title="Contact Us | Direct Rent"
         description="Get in touch to ask about lease opportunities, pricing, available units, and flexible lease terms."
       />
       <Navbar />
